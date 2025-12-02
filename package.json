@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "gsap": "^3.13.0",
+    "tailwindcss": "^4.1.13"
+  },
+  "scripts": {
+    "watch": "npx @tailwindcss/cli -i assets/css/input.css -o assets/css/style.css --watch"
+  }
+}
