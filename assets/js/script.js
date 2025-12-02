@@ -193,30 +193,3 @@ setTimeout(() => {
   });
 
 }, 5000);
-
-// Load random image once on page load
-(() => {
-  const randomImageElement = document.getElementById('randomImage');
-  if (!randomImageElement) return;
-
-  // Array of 10 images
-  const images = [
-    'assets/images/image-1.webp',
-    'assets/images/image-2.webp',
-    'assets/images/image-3.webp',
-    'assets/images/image-4.webp',
-    'assets/images/image-5.webp',
-    'assets/images/image-6.webp',
-    'assets/images/image-7.webp',
-    'assets/images/image-8.webp',
-    'assets/images/image-9.webp',
-    'assets/images/image-10.webp',
-  ];
-
-  // Select random image
-  const randomIndex = Math.floor(Math.random() * images.length);
-  const randomImagePath = images[randomIndex];
-
-  // Set the image source
-  randomImageElement.src = randomImagePath;
-})();
