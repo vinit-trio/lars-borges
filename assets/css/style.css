@@ -180,9 +180,6 @@
   }
 }
 @layer utilities {
-  .visible {
-    visibility: visible;
-  }
   .absolute {
     position: absolute;
   }
@@ -300,6 +297,9 @@
   }
   .h-\[calc\(100vh-116px\)\] {
     height: calc(100vh - 116px);
+  }
+  .min-h-\[calc\(100vh-116px\)\] {
+    min-height: calc(100vh - 116px);
   }
   .w-full {
     width: 100%;
@@ -528,6 +528,11 @@
   .xl\:h-\[calc\(100vh-148px\)\] {
     @media (width >= 1200px) {
       height: calc(100vh - 148px);
+    }
+  }
+  .xl\:min-h-\[calc\(100vh-148px\)\] {
+    @media (width >= 1200px) {
+      min-height: calc(100vh - 148px);
     }
   }
   .xl\:max-w-256 {
