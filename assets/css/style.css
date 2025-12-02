@@ -665,6 +665,7 @@
   }
   .animated_link {
     position: relative;
+    padding-block: calc(var(--spacing) * 2);
   }
   .animated_link::after {
     position: absolute;
