@@ -220,10 +220,3 @@ setTimeout(() => {
   // Set the image source
   randomImageElement.src = randomImagePath;
 })();
-
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-let smoother = ScrollSmoother.create({
-  smooth: 2,
-  effects: true
-});
