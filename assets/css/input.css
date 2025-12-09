@@ -12,7 +12,7 @@
   --breakpoint-xl: 1200px;
   --breakpoint-xxl: 1400px;
 
-  --font-neue: "NeueHaasGroteskDisp Pro Md","Helvetica Neue",Arial,system-ui,sans-serif;
+  --font-neue: "NeueHaasGroteskDisp Pro Md", "Helvetica Neue", Arial, system-ui, sans-serif;
 
   --text-h1: clamp(2.25rem, 2.025rem + 1.125vw, 3.375rem);
   --text-h1--line-height: clamp(2.25rem, 2.025rem + 1.125vw, 3.375rem);
@@ -35,77 +35,98 @@
 }
 
 @font-face {
-    font-family: 'NeueHaasGroteskDisp Pro Md';
-    src: url('../fonts/NHaasGroteskDSPro-65Md.woff2') format('woff2'),
-        url('../fonts/NHaasGroteskDSPro-65Md.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'NeueHaasGroteskDisp Pro Md';
+  src: url('../fonts/NHaasGroteskDSPro-65Md.woff2') format('woff2'),
+    url('../fonts/NHaasGroteskDSPro-65Md.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
-@layer{
-  body{
+@layer {
+  body {
     @apply font-neue text-black bg-white
   }
 
-  button{
+  button {
     @apply cursor-pointer
   }
 
-  .container{
+  .container {
     @apply max-w-full
   }
 
-  a{
+  a {
     @apply inline-block
   }
 
-  .animated_link{
+  .animated_link {
     @apply relative py-2
   }
 
-  .animated_link::after{
+  .animated_link::after {
     @apply absolute left-0 bottom-0 w-0 h-[1px] bg-current content-[''] transition-all duration-300
   }
 
   .animated_link:hover::after,
-  .animated_link.active::after{
+  .animated_link.active::after {
     @apply w-full
   }
-  
-  .tab{
+
+  .tab {
     @apply hidden
   }
 
-  .tab.active{
+  .tab.active {
     @apply block
   }
 
-  .mixed_content *{
+  .mixed_content * {
     @apply not-italic
   }
 
-  .mixed_content h2{
+  .mixed_content h2 {
     @apply text-[26px] leading-[28px] mt-24 mb-4
   }
 
-  .mixed_content h3{
+  .mixed_content h3 {
     @apply text-[24px] leading-[26px] mt-22 mb-4
   }
 
-  .mixed_content h4{
+  .mixed_content h4 {
     @apply text-[22px] leading-[24px] mt-20 mb-4
   }
 
-  .mixed_content h5{
+  .mixed_content h5 {
     @apply text-[20px] leading-[22px] mt-18 mb-4
   }
 
-  .mixed_content h6{
+  .mixed_content h6 {
     @apply text-[18px] leading-[20px] mt-16 mb-4
   }
 
-  .mixed_content p{
+  .mixed_content p {
     @apply mb-16
+  }
+
+  .mixed_content a {
+    @apply underline underline-offset-4
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    #gallery-container > .gallery-item {
+      scale: .8;
+      opacity: 0;
+      animation: fade-in linear forwards;
+      animation-timeline: view();
+      animation-range: entry 200px;
+    }
+  }
+
+  @keyframes fade-in {
+    to {
+      scale: 1;
+      opacity: 1;
+    }
   }
 }
